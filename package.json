@@ -1,0 +1,26 @@
+{
+  "name": "responsive_sass_website",
+  "version": "1.0.0",
+  "description": "This is the final project for my front end course",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss -o dist/css/ --recursive"
+  },
+  "keywords": [
+    "front",
+    "end",
+    "responsive",
+    "website",
+    "deployment",
+    "node-sass",
+    "scss",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Joona Nykänen",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
