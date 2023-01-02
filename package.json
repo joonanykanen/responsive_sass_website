@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "This is the final project for my front end course",
   "main": "index.js",
+  "homepage": "https://joonanykanen.github.io/responsive_sass_website",
   "scripts": {
-    "sass": "node-sass -w scss -o dist/css/ --recursive"
+    "sass": "node-sass -w scss -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "front",
@@ -21,6 +23,7 @@
   "author": "Joona Nykänen",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "node-sass": "^8.0.0"
   }
 }

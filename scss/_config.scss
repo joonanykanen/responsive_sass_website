@@ -1,13 +1,10 @@
 $primary-color: #191E29;
 $secondary-color: #01C38D;
-$tertiary-color: #132D46;
-$text-color-secondary: #696E79;
 $rgba_primary: rgba(1, 195, 141, 0.3);
 
 $home-image: url(../img/background.jpg);
 $show-home-image: true;
 $background-opacity: 0.9;
-
 $footer-size: 60px;
 
 @mixin defaultTransition {
