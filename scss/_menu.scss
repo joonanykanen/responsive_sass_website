@@ -1,0 +1,89 @@
+
+.menu-btn {
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    @include defaultTransition;
+
+    &:hover {
+        scale: 1.1;
+    }
+
+    &.close {
+        transform: rotateY(0.5turn) rotate(0.5turn);
+    }
+}
+
+.menu {
+    position: static;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        overflow: hidden;
+        list-style: none;
+        height: 9vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: darken($primary-color, 5);
+        transform: translate(100%, 0);
+        @include defaultTransition;
+
+        // Show menu bar
+        &.show {
+            transform: translate(0, 0);
+        }
+    }
+
+    .nav-item {
+        transform: translate(0, -400px);
+        @include defaultTransition;
+
+        &.show {
+            // Slide in from top
+            transform: translate(0, 0);
+        }
+
+        &.current > a {
+            // For the current page
+            color: $secondary-color;
+        }
+    }
+
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 24px;
+        text-transform: uppercase;
+        padding: 0 1rem;
+        font-weight: 300;
+        color: set-text-color($primary-color);
+        text-decoration: none;
+        @include defaultTransition;
+
+        &:hover {
+            color: $secondary-color;
+            scale: 1.05;
+        }
+    }
+}
+
+// Delay each nav item slide by 0.1s
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.05s;
+    }
+}
