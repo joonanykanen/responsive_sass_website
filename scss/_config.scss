@@ -2,6 +2,7 @@ $primary-color: #191E29;
 $secondary-color: #01C38D;
 $tertiary-color: #132D46;
 $text-color-secondary: #696E79;
+$rgba_primary: rgba(1, 195, 141, 0.3);
 
 $home-image: url(../img/background.jpg);
 $show-home-image: true;
@@ -34,6 +35,10 @@ $footer-size: 60px;
                 z-index: -1;
                 background: rgba($primary-color, $background-opacity);
             }
+        }
+
+        &#gradient-bg {
+            background: linear-gradient(0.4turn, $primary-color, 50%, darken($primary-color, 10));;
         }
     }
 }
@@ -71,3 +76,9 @@ $footer-size: 60px;
         @content;
     }
 }
+
+@keyframes glow {
+    to {
+      text-shadow: 0 0 5px $rgba_primary, 0 0 10px $rgba_primary, 0 0 15px $rgba_primary;
+    }
+  }

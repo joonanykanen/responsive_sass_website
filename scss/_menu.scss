@@ -20,7 +20,7 @@
     position: static;
     top: 0;
     width: 100%;
-    opacity: 0.8;
+    opacity: 1.0;
     visibility: hidden;
 
     &.show {
@@ -82,7 +82,7 @@
 }
 
 // Delay each nav item slide by 0.05s
-@for $x from 1 through 4 {
+@for $x from 1 through 3 {
     .nav-item:nth-child(#{$x}) {
         transition-delay: $x * 0.05s;
     }

@@ -4,6 +4,7 @@ const menuCircle = document.querySelector("fa-circle-notch");
 const menu = document.querySelector(".menu");
 const menuNav = document.querySelector(".menu-nav");
 const navItems = document.querySelectorAll(".nav-item");
+const h1 = document.querySelector(".text-secondary");
 
 let showMenu = false;
 
@@ -27,3 +28,23 @@ function toggleMenu() {
         showMenu = false;
     }
 }
+
+function startAnimation() {
+    h1.style.animationDelay = "${Math.random() * 5}s";
+    h1.style.animationPlayState = "running";
+}
+
+function stopAnimation() {
+    h1.style.animationPlayState = "paused";
+}
+
+setInterval(() => {
+    const shouldAnimate = Math.random() < 0.5;
+    if (shouldAnimate) {
+    startAnimation();
+    } else {
+    stopAnimation();
+    }
+}, 500);
+
+
